@@ -11,6 +11,10 @@ import (
 type MessageServer struct {
 }
 
+func (s MessageServer) mustEmbedUnimplementedMessageServiceServer() {
+	panic("implement me")
+}
+
 var port = ":8080"
 
 func (MessageServer) SayIt(ctx context.Context, req *p.Request) (*p.Response, error) {
@@ -35,5 +39,6 @@ func main() {
 		return
 	}
 	fmt.Println("Serving requests...")
+
 	server.Serve(listen)
 }
