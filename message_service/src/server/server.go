@@ -12,10 +12,6 @@ type MessageServer struct {
 	p.UnimplementedMessageServiceServer
 }
 
-//func (s MessageServer) mustEmbedUnimplementedMessageServiceServer() {
-//	panic("implement me")
-//}
-
 var port = ":8080"
 
 func (MessageServer) SayIt(ctx context.Context, req *p.Request) (*p.Response, error) {
