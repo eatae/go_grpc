@@ -9,11 +9,12 @@ import (
 )
 
 type MessageServer struct {
+	p.UnimplementedMessageServiceServer
 }
 
-func (s MessageServer) mustEmbedUnimplementedMessageServiceServer() {
-	panic("implement me")
-}
+//func (s MessageServer) mustEmbedUnimplementedMessageServiceServer() {
+//	panic("implement me")
+//}
 
 var port = ":8080"
 
